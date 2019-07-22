@@ -1,0 +1,22 @@
+﻿<Window x:Class="JsonGenomix.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JsonGenomix"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView Name="ListeViewFiles" Height="271" Margin="10,0,9.6,82" VerticalAlignment="Bottom" MouseDoubleClick="DisplayContent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Path}"></TextBlock>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Name="SelectJson" Content="Charger fichiers JSON" Width="200" VerticalAlignment="Top" Click="SelectJson_Click" Margin="0,38,-0.4,0"/>
+        <Button Name="DeleteBtn" Content="Supprimer Ficher de la liste" Width="200" VerticalAlignment="Top" Click="RemoveFileListe" Margin="513,365,0,0" />
+    </Grid>
+</Window>
