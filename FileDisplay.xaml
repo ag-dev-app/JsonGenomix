@@ -9,6 +9,7 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="File Path"/><Run Text=" :"/></TextBlock>
         <TextBlock Name="LblName" Margin="100,39,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Name="Content" HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="337" Width="772" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+        <TextBox Name="Content" HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="116" Width="772" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+        <TextBox Name="Content2" HorizontalAlignment="Left" Margin="10,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="164" Width="772" ScrollViewer.VerticalScrollBarVisibility="Visible" />
     </Grid>
 </Window>

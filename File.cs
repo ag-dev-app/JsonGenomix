@@ -18,22 +18,11 @@ namespace JsonGenomix
             get { return _path; }
             private set { _path = value; }
         }
-
-        public File(string path) : this(path, false) { }
-        public File(string path, bool clean)
+        public File(string path)
         {
             _path = path;
-            if (clean)
-            {
-                Clean();
-            }
         }
 
-        public void Clean()
-        {
-            StreamWriter stream = new StreamWriter(_path, false);
-            stream.Close();
-        }
         public string JsonString
         {
             get
@@ -47,20 +36,7 @@ namespace JsonGenomix
                 return txt;
 
             }
-            set
-            {
-                Clean();
-                this.Add(value);
-            }
         }
-
-        public void Add(string line)
-        {
-            StreamWriter stream = new StreamWriter(_path, true);
-            stream.WriteLine(line);
-            stream.Close();
-        }
-
 
         public IEnumerator<string> GetEnumerator()
         {

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using JsonGenomix.JsonFile;
 
 namespace JsonGenomix
 {
@@ -24,6 +25,7 @@ namespace JsonGenomix
             InitializeComponent();
             LblName.Text = file.Path;
             Content.Text = file.JsonString;
+            
         }
 
     }
