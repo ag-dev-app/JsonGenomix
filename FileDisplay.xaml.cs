@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using JsonGenomix.JsonFile;
+using Newtonsoft.Json.Linq;
+using static JsonGenomix.JsonFile.all;
 
 namespace JsonGenomix
 {
@@ -20,12 +22,39 @@ namespace JsonGenomix
     /// </summary>
     public partial class FileDisplay : Window
     {
+        File _file;
+        public JsonFieldsCollector JsonCollector { get; set; }
+
+
         public FileDisplay(File file)
         {
             InitializeComponent();
+            _file = file;
             LblName.Text = file.Path;
-            Content.Text = file.JsonString;
-            
+            JsonCollector = new JsonFieldsCollector(_file.Path);
+        }
+
+        //public all CreateJsonObj(string file)
+        //{
+        //    all objAll = new all(file);
+        //    return objAll;
+        //}
+
+        private void DisplayValue(object sender, MouseButtonEventArgs e)
+        {
+            string selected = (string)ListeViewKeys.SelectedItem;
+            string displayDatas = JsonCollector.DisplayDatas(selected);
+            Content.Text = displayDatas;
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            JsonCollector.SetFieldsKeys(_file.JsonString);
+
+            ListeViewKeys.ItemsSource = JsonCollector.GetFieldsKeys();
+
         }
 
     }

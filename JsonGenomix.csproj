@@ -59,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="JsonFieldsCollector.cs" />
+    <Compile Include="JsonFile\all.cs" />
+    <Compile Include="JsonFile\JsonModel.cs" />
     <Compile Include="JsonFile\txt_report.cs" />
     <Page Include="FileDisplay.xaml">
       <SubType>Designer</SubType>
@@ -76,7 +79,6 @@
     <Compile Include="FileDisplay.xaml.cs">
       <DependentUpon>FileDisplay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="JsonFile\all.cs" />
     <Compile Include="JsonFile\bc.cs" />
     <Compile Include="JsonFile\carrier.cs" />
     <Compile Include="JsonFile\fit.cs" />

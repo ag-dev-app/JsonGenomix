@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="FileDisplay" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="File Path"/><Run Text=" :"/></TextBlock>
-        <TextBlock Name="LblName" Margin="100,39,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Name="Content" HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="116" Width="772" ScrollViewer.VerticalScrollBarVisibility="Visible" />
-        <TextBox Name="Content2" HorizontalAlignment="Left" Margin="10,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="164" Width="772" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="File Path"/><Run Text=" :"/></TextBlock>
+        <TextBlock Name="LblName" Margin="100,11,9.6,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Récuperer File Datas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,40,0,0" Click="Button_Click"/>
+        <ListView Name="ListeViewKeys" Height="335" VerticalAlignment="Bottom" MouseDoubleClick="DisplayValue" Margin="3,0,582.6,14">
+
+        </ListView>
+        <TextBox Name="Content" HorizontalAlignment="Left" Margin="211,71,0,0" VerticalAlignment="Top" Height="335" Width="569" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        </TextBox>
     </Grid>
 </Window>
